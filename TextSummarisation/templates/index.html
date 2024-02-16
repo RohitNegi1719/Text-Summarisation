@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">ROHIT NEGI</h1>
+        <h2 class="title">Text Summarizer</h2>
+        
+        <div class="input-container">
+            <textarea id="inputText" class="textbox" rows="8" placeholder="Write or paste your text here..."></textarea>
+        </div>
+
+        <div class="button-container">
+            <button onclick="summarizeText()" class="button">Summarize</button>
+            <button onclick="clearTextAreas()" class="button">Clear Text Areas</button>
+        </div>
+
+        <div class="text-input-container">
+            <label for="numSentences">Enter number of sentences you want in summary:</label>
+            <input type="number" id="numSentences" name="numSentences" min="1" max="10" value="3">
+        </div>
+        
+        <div class="summary-container">
+            <textarea id="summary" class="textbox" rows="8" placeholder="Summarized text here..."></textarea>
+        </div>
+    </div>
+     <script src="{{ url_for('static', filename='script.js') }}"></script> 
+</body>
+</html>
